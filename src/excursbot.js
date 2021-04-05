@@ -34,13 +34,8 @@ function joinedlole(){
 
 // Colors
 client.setColor({r: 95, g: 158, b: 160});
-// Ping Command
-/*client.on("message", (msg) => {
-  if (msg.messageText === "^ping"){
-    client.say(CHANNEL_NAME, "Pong! 🏓" )
-  }
-}) */
 
+// Simple command 😎 
 client.on("message", (msg) => {
   if (msg.messageText === "^hello"){
     client.say(CHANNEL_NAME," 👋 Okayge " + msg.displayName)
