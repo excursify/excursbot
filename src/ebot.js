@@ -1,15 +1,14 @@
-import {BOT_USERNAME, CHANNEL_NAME, O_AUTH} from './login'
-const tmi = require("tmi.js");
+const login= require('./login');
 const { ChatClient } = require("dank-twitch-irc");
 
-let client = new ChatClient(
+const client = new ChatClient(
   {
-    username: BOT_USERNAME,
-    password: O_AUTH
+    username: login.botName,
+    password: login.oAuth
   }
 )
 
-client.on("connecting", () => client.say(CHANNEL_NAME,"Trying to join PauseChamp"))
+client.on("connecting", () => client.say(login.chanName,"Trying to join PauseChamp"))
 client.on("ready", () => joinedlole());
 client.on("close", (error) => {
   if (error != null) {
@@ -23,12 +22,12 @@ client.on("PRIVMSG", (msg) => {
 
 // Joining Channel
 client.connect();
-client.join(CHANNEL_NAME);
+client.join(login.chanName);
 
 // Random Funcion
 function joinedlole(){
   console.log("Successfully connected to chat");
-  client.say(CHANNEL_NAME, "Success PagMan 🤘 ");
+  client.say(login.chanName, "Success PagMan 🤘 PAGUEROOOO!!! ");
 }
 
 
@@ -38,10 +37,14 @@ client.setColor({r: 95, g: 158, b: 160});
 // Simple command 😎 
 client.on("message", (msg) => {
   if (msg.messageText === "^hello"){
-    client.say(CHANNEL_NAME," 👋 Okayge " + msg.displayName)
+    client.say(login.chanName," 👋 Okayge " + msg.displayName)
   }
 })
 
+module.exports = client;
+
+
+/*
 function timeformat(seconds){
   function pad(s){
       return (s < 10 ? '0' : '') + s;
@@ -58,4 +61,4 @@ client.on("message", (msg) => {
   if (msg.messageText === "^ping"){
     client.say(CHANNEL_NAME,"Pong! FeelsDankMan 🏓 Uptime: " + timeformat(process.uptime()))
   }
-})   
+}) */    
