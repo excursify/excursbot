@@ -2,9 +2,10 @@
   "name": "excursbot",
   "version": "1.0.0",
   "description": "",
-  "main": "src",
+  "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,10 @@
     "dank-twitch-irc": "^4.3.0",
     "esm": "^3.2.25",
     "tmi.js": "^1.7.5",
+    "utils": "^0.3.1",
     "yarn": "^1.22.10"
+  },
+  "devDependencies": {
+    "@types/tmi.js": "^1.7.1"
   }
 }

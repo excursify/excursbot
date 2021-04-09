@@ -1,4 +1,4 @@
-const login= require('./login');
+const login = require('./login');
 const { ChatClient } = require("dank-twitch-irc");
 
 const client = new ChatClient(
@@ -33,32 +33,4 @@ function joinedlole(){
 
 // Colors
 client.setColor({r: 95, g: 158, b: 160});
-
-// Simple command 😎 
-client.on("message", (msg) => {
-  if (msg.messageText === "^hello"){
-    client.say(login.chanName," 👋 Okayge " + msg.displayName)
-  }
-})
-
 module.exports = client;
-
-
-/*
-function timeformat(seconds){
-  function pad(s){
-      return (s < 10 ? '0' : '') + s;
-  };
-  var hours = Math.floor(seconds/ (60*60));
-  var minutes = Math.floor(seconds % (60*60) / 60);
-  var seconds = Math.floor(seconds % 60);
-  
-  return pad(hours) + ':' + pad(minutes) + ":" + pad(seconds);
-}
-
-client.on("message", (msg) => {
-
-  if (msg.messageText === "^ping"){
-    client.say(CHANNEL_NAME,"Pong! FeelsDankMan 🏓 Uptime: " + timeformat(process.uptime()))
-  }
-}) */    
