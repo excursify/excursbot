@@ -9,4 +9,4 @@ bot.ebot.on("message",  (msg) => {
             bot.ebot.say(msg.channelName, echo);
         }
     }
-)
+);
