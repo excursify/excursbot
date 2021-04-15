@@ -1,5 +1,5 @@
 bot.ebot.on("message", (msg) => {
-    if(!msg) return;
+    if(!msg.messageText) return;
     if (msg.messageText === '^dice') {
         const num = rollDice();
         bot.ebot.say(msg.channelName, `You rolled ${num} !`);

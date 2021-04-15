@@ -3,7 +3,7 @@ const { ChatClient } = require("dank-twitch-irc");
 
 const client = new ChatClient(
   {
-    username: login.botName,
+    username: login.bot_Name,
     password: login.oAuth
   }
 );

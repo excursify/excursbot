@@ -14,7 +14,7 @@ function spammerino (msg){
     const spltText = msg.messageText.split(/\s+/);
     const splcText = spltText.slice(1,-1);
     const spmlmt = spltText.pop();
-    const num = new Number(spmlmt);
+    const num = Number(spmlmt);
     const spam = splcText.join(" ");
     for (let i = 0; i <= num; i++){
         bot.ebot.say(msg.channelName, spam);

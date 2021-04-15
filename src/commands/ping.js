@@ -1,7 +1,7 @@
 function timeformat(seconds){
   function pad(s){
       return (s < 10 ? '0' : '') + s;
-  };
+  }
   var hours = Math.floor(seconds/ (60*60));
   var minutes = Math.floor(seconds % (60*60) / 60);
   var sec = Math.floor(seconds % 60);
