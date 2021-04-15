@@ -9,3 +9,6 @@ module.exports.spam = require('./spam');
 
 // echo 
 module.exports.echo = require('./echo'); 
+
+// test 
+module.exports.test = require('./test');

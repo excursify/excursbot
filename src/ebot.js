@@ -20,6 +20,8 @@ client.on("PRIVMSG", (msg) => {
   console.log(`[#${msg.channelName}] ${msg.displayName}: ${msg.messageText}`);
 });
 
+client.on()
+
 // Joining Channel
 client.connect();
 client.join(login.chanName);
