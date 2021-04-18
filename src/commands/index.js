@@ -9,5 +9,9 @@ module.exports.spam = require('./spam');
 
 // echo 
 module.exports.echo = require('./echo'); 
+
 // dice 
 module.exports.dice = require('./dice');
+
+// rr commmand
+module.exports.rusroulette = require('./rusroulette');
