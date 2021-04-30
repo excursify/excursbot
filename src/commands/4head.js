@@ -8,4 +8,3 @@ bot.ebot.on("message", (msg) => {
     }
 })*/
 
-// This is a test lole xd 
