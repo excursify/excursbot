@@ -1,8 +1,8 @@
 ##### Commands 
 Commands to have:
-[ ] Ping
-[ ] RR
-[ ] Spam ![pepeLaugh] (https://cdn.frankerfacez.com/emote/341767/2)
+[x] Ping
+[x] RR
+[x] Spam ![pepeLaugh] (https://cdn.frankerfacez.com/emote/341767/2)
 [ ] Bttv
 [ ] FFZ
 [ ] Search Commands 
