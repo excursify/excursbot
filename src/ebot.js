@@ -1,5 +1,4 @@
 require('dotenv').config();
-// const login = require('./login');
 const { ChatClient } = require("dank-twitch-irc");
 const client = new ChatClient(
   {
