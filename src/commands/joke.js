@@ -9,7 +9,7 @@ bot.ebot.on("message", (msg) => {
                 bot.ebot.say(msg.channelName, `${response.setup} ${response.punchline} 4Head`);
         }   
             catch (error){
-                console.log('Error FeelsBadMan');
+                bot.ebot.say(msg.channelName, 'BibleThump API Error');
         }
         })()
     }
