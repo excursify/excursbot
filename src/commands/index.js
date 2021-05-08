@@ -15,3 +15,9 @@ module.exports.dice = require('./dice');
 
 // rr commmand
 module.exports.rusroulette = require('./rusroulette');
+
+//4Head joke
+module.exports.joke = require('./joke');
+
+// Dad Joke
+module.exports.dadjoke = require('./dadjoke');

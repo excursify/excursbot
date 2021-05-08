@@ -1,14 +1,14 @@
-const login = require('./login');
+require('dotenv').config();
+// const login = require('./login');
 const { ChatClient } = require("dank-twitch-irc");
-
 const client = new ChatClient(
   {
-    username: login.bot_Name,
-    password: login.oAuth
+    username: process.env.BOT_USERNAME,
+    password: process.env.O_AUTH
   }
 );
 
-client.on("connecting", () => client.say(login.chanName,"Trying to join PauseChamp"));
+client.on("connecting", () => client.say(process.env.CHANNEL_NAME,"Trying to join PauseChamp"));
 client.on("ready", () => joinedlole());
 client.on("close", (error) => {
   if (error != null) {
@@ -22,12 +22,12 @@ client.on("PRIVMSG", (msg) => {
 
 // Joining Channel
 client.connect();
-client.join(login.chanName);
+client.join(process.env.CHANNEL_NAME);
 
 // Random Funcion
 function joinedlole(){
   console.log("Successfully connected to chat");
-  client.say(login.chanName, "Success PagMan 🤘 PAGUEROOOO!!! ");
+  client.say(process.env.CHANNEL_NAME, "Success PagMan 🤘 PAGUEROOOO!!! ");
 }
 
 // Colors
